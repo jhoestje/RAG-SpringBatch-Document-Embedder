@@ -1,0 +1,7 @@
+FROM ollama/ollama:latest
+
+# Pre-download the llama3.2-vision model
+RUN ollama pull llama3.2-vision
+
+# Set the default command to run the model
+CMD ["ollama", "serve"]
